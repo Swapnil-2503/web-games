@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style></style>
+</head>
+<body>
+    <h1>Welcome to Crush See game</h1>
+    <b id="Name"></b>
+    <p>Will you want to see your crush name then tap on yes else tap on no.</p>
+    <button id="yes" onclick="tapYes()">YES</button> <button id="no" onclick="tapNo()">NO</button>
+    <p id="see"></p>
+</body>
+<script>
+    var name=prompt("What is your name ?:");
+    document.getElementById('Name').innerHTML="Welcome to our game " +name;
+    const crushes=["Sakshi","Aditi","aditi","Sanika","Pradnya","Shreya","Mayuri","Arpita","Puja","Nikita","Renuka","Revati","Aishwarya"];
+    let x=Math.random()*12;
+    function tapYes(){
+          document.getElementById('see').innerHTML="Your crush also loves you❤️. "+name+" Loves "+crushes.at(x);
+    }
+    function tapNo(){
+        document.getElementById('see').innerHTML="It seems like you dont have interest in girls Get Lost back from here!";
+    }
+</script>
+</html>
